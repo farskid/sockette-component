@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0",
+  "name": "sockette-component",
+  "umd:name": "socketteComponent",
+  "repository": "farskid/sockette-component",
+  "description": "Sockette component for React and Preact",
+  "umd:main": "dist/sockette-component.min.js",
+  "module": "dist/sockette-component.es.js",
+  "main": "dist/sockette-component.js",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "author": {
+    "name": "Farzad YZ",
+    "email": "farskid@gmail.com",
+    "url": "http://farzadyz.com"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "keywords": [
+    "socket",
+    "sockette",
+    "websocket",
+    "react",
+    "preact"
+  ],
+  "dependencies": {
+    "sockette": "^1.0.0"
+  },
+  "devDependencies": {
+    "gzip-size": "^4.1.0",
+    "pretty-bytes": "^4.0.2",
+    "rollup": "^0.52.1",
+    "rollup-plugin-buble": "^0.18.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "uglify-js": "^3.2.1"
+  }
+}
