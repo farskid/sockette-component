@@ -32,7 +32,7 @@ _Quick example that wraps Sockette within a custom component._
 import { Component, createElement } from "react";
 import createSocket from "sockette-component";
 
-const Socket = createSocket({
+const Sockette = createSocket({
   Component,
   createElement
 });
@@ -56,18 +56,18 @@ class Foobar extends Component {
 
   sendMessage = _ => {
     // WebSocket available in state!
-    this.stte.ws.send("Hello, world!");
+    this.state.ws.send("Hello, world!");
   };
 
   render() {
     return (
       <div class="demo">
-        <button onclick={this.sendMessage}>SEND</button>
+        <button onClick={this.sendMessage}>SEND</button>
 
         <Sockette
           url="wss://..."
           getSocket={socket => {
-            this.setState(socket);
+            this.setState({socket});
           }}
           maxAttempts={25}
           onopen={this.onOpen}
@@ -86,7 +86,7 @@ class Foobar extends Component {
 import { h, Component } from "preact";
 import Sockette from "sockette-component";
 
-const Socket = createSocket({
+const Sockette = createSocket({
   Component,
   createElement: h
 });
@@ -116,7 +116,7 @@ class Foobar extends Component {
   render() {
     return (
       <div class="demo">
-        <button onclick={this.sendMessage}>SEND</button>
+        <button onClick={this.sendMessage}>SEND</button>
 
         <Sockette
           url="wss://..."
